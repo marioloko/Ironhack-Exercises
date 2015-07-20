@@ -1,0 +1,21 @@
+<h2 class="secondary-title">Log In</h2>
+<form action="/login" method="post">
+	<div class="centered-text">
+		<input  name="username" type="text">
+	</div>
+
+	<div class="centered-text">
+		<input name="password" type="text">
+	</div>
+
+	<div class="centered-text">
+		<button type="submit" name="commit">Log In</button>
+	</div>
+
+	<% if @error %>
+		<div class="centered-text">
+			<%= @error %>
+		</div>
+	<% end %>
+
+</form>

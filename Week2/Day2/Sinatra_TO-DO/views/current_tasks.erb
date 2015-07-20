@@ -1,0 +1,23 @@
+<h2 class="secondary-title">Current Tasks</h2>
+<div class="centered-text">
+	<% unless @tasks.empty? 	 %>
+		<ul>
+		<% @tasks.each do |task| %>
+			<% if !task.status %>
+				<li>
+					<%= task.content %>
+					<form action="/task_completed" method="post" style="display: inline;" >
+						<button type="submit" name="task" value="<%= task.id %>">TASK COMPLETE</button>
+					</form>
+					<form action="/delete_task" method="post" style="display: inline;" >
+						<button type="submit" name="task" value="<%= task.id %>">DELETE TASK</button>
+					</form>
+				</li>
+			<% end %>
+		<% end %>
+		</ul>
+	<% else %>
+		<p>There is no task yet.</p>
+	<% end %>
+	<a href="./completed_tasks">Completed Tasks</a>
+</div>

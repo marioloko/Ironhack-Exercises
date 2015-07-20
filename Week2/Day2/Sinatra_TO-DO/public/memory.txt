@@ -1,0 +1,2 @@
+Comer 0 true
+Programar 2 true

@@ -1,0 +1,10 @@
+<h2 class="secondary-title">Completed Tasks</h2>
+<div class="centered-text">
+	<% unless @tasks.empty? %>
+		<% @tasks.each do |task| %>
+			<% if task.status == true %>
+				<li><%= task.content %></li>
+			<% end %>
+		<% end %>
+	<% end %>
+</div>

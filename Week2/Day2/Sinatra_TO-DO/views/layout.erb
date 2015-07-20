@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sinatra TO-DO</title>
+		<meta charset="utf-8">
+		
+		<link rel="stylesheet" href="./stylesheet.css">
+	</head>
+	<body>
+		<nav>
+			<a href="/completed_tasks">COMPLETED TASKS</a>
+			<a href="/add_new_task">ADD NEW TASK</a>
+			<a href="/logout">LOGOUT</a>
+		</nav>
+		<h1 class="main-title">Sinatra TO-DO</h1>
+		<%= yield %>
+	</body>
+</html>
