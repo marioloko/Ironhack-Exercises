@@ -1,0 +1,38 @@
+[
+	{
+		"question" : "Which musical instrument has the name and form of a geometric figure",
+		"answer" : "triangle",
+		"id" : 0,
+		"points" : 3
+	},
+	{ 
+		"question" : "Which spanish city has five times the same vowel 'a'?",
+		"answer" : "guadalajara",
+		"id" : 1,
+		"points" : 2
+	},
+	{ 
+		"question" : "What is the square root of 900?",
+		"answer" : "30",
+		"id" : 2,
+		"points" : 1
+	},
+	{ 
+		"question" : "Love apple is another name for what?",
+		"answer" : "Tomato",
+		"id" : 3,
+		"points" : 3
+	},
+	{ 
+		"question" : "How many millimetres are there in 2.5 metres?",
+		"answer" : "2500",
+		"id" : 4,
+		"points" : 1
+	},
+	{ 
+		"question" : "How many millimetres are there in 2.5 metres?",
+		"answer" : "2500",
+		"id" : 4,
+		"points" : 1
+	}
+]
