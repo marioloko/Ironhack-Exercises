@@ -1,0 +1,10 @@
+<h1 class="main-title">Recent visited pages</h1>
+<div class="centered-text">
+	<% @links.each do |link| %>
+		<p>
+			<% if link.last_visit %>
+				<%= link.url %> / last_visit <%= link.last_visit %>
+			<% end %>
+		</p>
+	<% end %>
+</div>

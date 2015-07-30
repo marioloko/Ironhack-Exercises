@@ -1,0 +1,9 @@
+<h1 class="main-title">Most visited pages</h1>
+<div class="centered-text">
+	<% @links.each do |link| %>
+		<p>
+			<%= link.url %> / created on <%= link.created_at %>
+			/ shortened <%= link.shortlink %> / visite <%= link.visited %> times
+		</p>
+	<% end %>
+</div>
