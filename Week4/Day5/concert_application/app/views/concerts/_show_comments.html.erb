@@ -1,0 +1,12 @@
+<% if concert.comments.present? %>
+	<% concert.comments.each do |comment| %>
+		<div class="box">	
+			<strong><%= comment.title %>:</strong>
+			<%= comment.body %>
+		</div>
+		<br>
+	<% end %>
+<% else %>
+	<p>There is not comments yet</p>
+	<br>
+<% end %>

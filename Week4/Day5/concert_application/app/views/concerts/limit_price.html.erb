@@ -1,0 +1,4 @@
+<h2>How much can you spend?</h2>
+<%= form_tag(avaible_concerts_path, method: :get) do %>
+	<%= number_field_tag :price %>
+<% end %>

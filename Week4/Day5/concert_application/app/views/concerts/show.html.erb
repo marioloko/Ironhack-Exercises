@@ -1,0 +1,9 @@
+<h2>Concert Detail</h2>
+<%= render partial: 'concert_description', locals: { concert: @concert } %>
+<br>
+
+<h3>Comments</h3>
+<%= render partial: 'show_comments', locals: { concert: @concert } %>
+<%= render partial: 'form_comment', locals: { concert: @concert, comment: @comment } %>
+
+<%= flash_message %>

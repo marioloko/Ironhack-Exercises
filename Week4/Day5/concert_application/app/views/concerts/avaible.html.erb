@@ -1,0 +1,6 @@
+<h2>The next concerts value is lower than <%= @price %> euros:</h2>
+<% if @avaible_concerts.present? %>
+	<%= render partial: 'show_concerts', locals: { concerts: @avaible_concerts} %>
+<% else %>
+	<p> There is any avaible concert at <%= @price %> euros </p>
+<% end %>

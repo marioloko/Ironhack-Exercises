@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ConcertApplication</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1 class="main-title">MUSIC CONCERT NETWORK</h1>
+			<nav>
+				<ul class="list-inline list-unstyled">
+					<li><%= link_to 'Concerts', concerts_path %></li>
+					<li><%= link_to 'Add concert', new_concert_path %></li>
+					<li><%= link_to 'Avaible concerts', limit_price_path %></li>
+					<li><%= link_to 'Most populars', most_popular_path %></li>
+					<li><%= link_to 'Add city', new_city_path %></li>
+				</ul>
+			</nav>
+		</header>
+
+		<%= yield %>
+
+		<footer>
+			<ul class="list-unstyled">
+				<li><%= link_to 'Github', 'http://github.com/marioloko' %></li>
+				<li><%= link_to 'Wordpress', 'http://adriangallegocastellanos.wordpress.com'%>
+			</ul>
+		</footer>
+	</div>
+</body>
+</html>

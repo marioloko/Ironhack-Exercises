@@ -1,0 +1,8 @@
+<div class="centered-text">
+	<p><strong>Band:</strong> <%= concert.band %></p>
+	<p><strong>Venue:</strong> <%= concert.venue %></p>
+	<p><strong>City:</strong> <%= City.find(concert.city_id).name %></p>
+	<p><strong>Date:</strong> <%= concert.date %></p>
+	<p><strong>Price:</strong> <%= concert.price %> euros</p>
+	<p><strong>Description:</strong> <%= concert.description %></p>
+</div>

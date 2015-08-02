@@ -1,0 +1,4 @@
+<% concerts.each do |concert| %>
+	<h3><%= link_to concert.band, concert_path(concert.id) %></h3>
+	<%= render partial: 'concert_description', locals: {concert: concert} %>
+<% end %>

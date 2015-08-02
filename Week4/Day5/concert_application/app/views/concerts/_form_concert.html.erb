@@ -1,0 +1,75 @@
+<%= form_for concert do |f| %>
+	<div class="row">
+		<div class="col-md-1">
+			<%= f.label :band %>
+		</div>
+
+		<div class="col-md-11">
+			<%= f.text_field :band %>
+		</div>
+		<br>
+
+	</div>
+
+	<div class="row">
+		<div class="col-md-1">
+			<%= f.label :venue %>
+		</div>
+
+		<div class="col-md-11">
+			<%= f.text_field :venue %>
+		</div>
+		<br>
+
+	</div>
+
+	<div class="row">
+		<div class="col-md-1">
+			<%= f.label :city %>
+		</div>
+
+		<div class="col-md-11">
+			<%= f.collection_select(:city_id, City.all, :id, :name, {:prompt => 'Select City'} ) %>
+		</div>
+		<br>
+
+	</div>
+	
+	<div class="row">
+		<div class="col-md-1">
+			<%= f.label :date %>
+		</div>
+
+		<div class="col-md-11">
+			<%= f.date_select :date %>
+		</div>
+		<br>
+
+	</div>
+
+	<div class="row">
+		<div class="col-md-1">
+			<%= f.label :price %>
+		</div>
+
+		<div class="col-md-11">
+			<%= f.number_field :price %>
+		</div>
+		<br>
+
+	</div>
+
+	<div class="row">
+		<div class="col-md-1">
+			<%= f.label :description %>
+		</div>
+
+		<div class="col-md-11">
+			<%= f.text_area :description %>
+		</div>
+		<br>
+
+	</div>
+	
+	<%= f.submit 'Add' %>
+<% end %>
