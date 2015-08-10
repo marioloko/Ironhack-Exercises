@@ -1,4 +1,5 @@
 <div class="centered-text">
+	<%= image_tag concert.poster.url(:medium) %>
 	<p><strong>Band:</strong> <%= concert.band %></p>
 	<p><strong>Venue:</strong> <%= concert.venue %></p>
 	<p><strong>City:</strong> <%= City.find(concert.city_id).name %></p>

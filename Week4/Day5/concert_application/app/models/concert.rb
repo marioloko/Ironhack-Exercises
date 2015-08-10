@@ -1,7 +1,9 @@
 class Concert < ActiveRecord::Base
 	has_many :comments
 	belongs_to :city
-	validates :band, :venue, :city, :date, :price, :description, presence: true
+	has_attached_file :poster, styles: {:medium => "300x300>", :thumb => "100x100>"}
+	validates_attachment_content_type :poster, :content_type => /\Aimage\/.*\z/
+	validates :band, :venue, :city, :date, :price, :description, :poster, presence: true
 
 	def self.later_concerts
 		Concert.where("date >= ?", Date.today)

@@ -1,4 +1,4 @@
-<%= form_for concert do |f| %>
+<%= form_for concert, :html => {:multipart => true } do |f| %>
 	<div class="row">
 		<div class="col-md-1">
 			<%= f.label :band %>
@@ -70,6 +70,18 @@
 		<br>
 
 	</div>
-	
+
+	<div class="row">
+		<div class="col-md-1">
+			<%= f.label :poster %>
+		</div>
+
+		<div class="col-md-11">
+			<%= f.file_field :poster %>
+		</div>
+		<br>
+
+	</div>
+
 	<%= f.submit 'Add' %>
 <% end %>

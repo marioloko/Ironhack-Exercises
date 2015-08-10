@@ -9,7 +9,10 @@
 			<p>Later this month:</p>
 			<ul class="list-unstyled">
 				<% @monthly_concerts.each do |concert| %>
-					<li><%= link_to concert.band, concert_path(concert.id) %></li>
+					<li>
+						<%= image_tag concert.poster.url(:thumb) %>
+						<%= link_to concert.band, concert_path(concert.id) %>
+					</li>
 				<% end %>
 			</ul>
 		</aside>

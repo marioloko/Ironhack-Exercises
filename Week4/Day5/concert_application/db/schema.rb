@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150803220157) do
+ActiveRecord::Schema.define(version: 20150810000538) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,10 +38,14 @@ ActiveRecord::Schema.define(version: 20150803220157) do
     t.date     "date"
     t.float    "price"
     t.text     "description"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.integer  "comments_count", default: 0
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.integer  "comments_count",      default: 0
     t.integer  "city_id"
+    t.string   "poster_file_name"
+    t.string   "poster_content_type"
+    t.integer  "poster_file_size"
+    t.datetime "poster_updated_at"
   end
 
   add_index "concerts", ["city_id"], name: "index_concerts_on_city_id", using: :btree
